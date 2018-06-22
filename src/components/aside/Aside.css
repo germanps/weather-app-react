@@ -1,0 +1,6 @@
+@import './../../content/css/variables.css';
+.wa-aside{
+   img{
+      width: 100%;
+   }
+}

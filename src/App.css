@@ -1,6 +1,10 @@
 @import './content/css/variables.css';
-.wa-app-intro{
-  p{
-    color: var(--monza); 
+.wa-app-header{
+  img{
+    width: 100%;
+    height: auto;
   }
+}
+.wa-app-intro{
+
 } 

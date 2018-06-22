@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './content/img/header.png';
+import Aside from './components/aside/Aside';
 import WeatherLocation from './components/WeatherLocation';
-import Aside from './components/Aside';
 import './App.css';
 
 class App extends Component {
