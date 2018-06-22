@@ -12,6 +12,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -173,6 +174,9 @@ module.exports = {
                   // https://github.com/facebookincubator/create-react-app/issues/2677
                   ident: 'postcss',
                   plugins: () => [
+                    require('postcss-import'),
+                    require('postcss-mixins'),
+                    //require('postcss-cssnext'),
                     require('postcss-nested'),
                     require('postcss-flexbugs-fixes'),
                     require('postcss-use')({ modules: '*' }),
@@ -184,7 +188,7 @@ module.exports = {
                         'not ie < 9', // React doesn't support IE8 anyway
                       ],
                       flexbox: 'no-2009',
-                    }),
+                    }) 
                   ],
                 },
               },

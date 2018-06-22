@@ -1,9 +1,22 @@
 :root {
   --monza: #dc0028;
   --porcelain: #f4f4f4;
+  --iron: #d6d8d8;
   --scorpion: #606060;
   --teal: #008080;
   --white: #ffffff;
   --vidaloca: #4c851f;
-}
 
+  /*units*/
+  --unit: 1rem;
+}
+/*Mixins*/
+@define-mixin title $ancho, $color{
+    width: $ancho;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--iron);
+    font-size: 14px ;
+    margin: auto;
+    color: $color;
+    font-weight: bold;
+}

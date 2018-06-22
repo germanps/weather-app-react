@@ -1,0 +1,8 @@
+@import './../../content/css/variables.css';
+.wa-main-content{
+   background-color: var(--porcelain);
+   padding: var(--unit);
+   h2{
+      @mixin title 97%, var(--monza);
+   }
+}
