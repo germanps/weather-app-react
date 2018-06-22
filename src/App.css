@@ -1,5 +1,6 @@
+@import './content/css/variables.css';
 .wa-app-intro{
   p{
-    color: blue; 
+    color: var(--monza); 
   }
-}
+} 
