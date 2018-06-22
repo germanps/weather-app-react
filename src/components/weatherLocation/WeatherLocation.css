@@ -1,5 +1,5 @@
 @import './../../content/css/variables.css';
-.wa-main-content{
+.wa-weather-location{
    background-color: var(--porcelain);
    padding: var(--unit);
    h2{
