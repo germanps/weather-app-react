@@ -176,7 +176,7 @@ module.exports = {
                   plugins: () => [
                     require('postcss-import'),
                     require('postcss-mixins'),
-                    //require('postcss-cssnext'),
+                    
                     require('postcss-nested'),
                     require('postcss-flexbugs-fixes'),
                     require('postcss-use')({ modules: '*' }),
@@ -188,7 +188,8 @@ module.exports = {
                         'not ie < 9', // React doesn't support IE8 anyway
                       ],
                       flexbox: 'no-2009',
-                    }) 
+                    }),
+                    require('postcss-cssnext')
                   ],
                 },
               },
