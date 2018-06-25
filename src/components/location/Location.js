@@ -1,10 +1,11 @@
 import React from 'react';
 import './Location.css';
 
-const Location = () => (
-   <div className="wa-location">
-      <h3>Bilbao</h3>
-   </div>
+const Location = ({ city, valor }) => (//Destruccturing (se llaman igual la constante que la prop que viene)
+    <div className="wa-location">
+        <h3>{city}</h3>
+        <span>{valor}</span>
+    </div>
 );
 
 export default Location;

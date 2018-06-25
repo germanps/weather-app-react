@@ -6,7 +6,7 @@ import './WeatherLocation.css';
 const WheatherLocation = () => (
    <div className="col-md-9 wa-weather-location">
       <h2>Weather App</h2>
-      <Location />
+      <Location city={'Bilbao!'} valor={50}/>
       <WeatherData />
    </div>
 );
