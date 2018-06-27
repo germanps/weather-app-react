@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import convert from 'convert-units';
 import Location from './../location/Location';
 import WeatherData from './../weatherData/WeatherData';
 import { SUN } from './../../constants/weathers';
+import TrasnforWeather from './../../services/transformWeather';
 import './WeatherLocation.css';
 
 const url = "http://api.openweathermap.org/data/2.5/weather";
@@ -25,30 +25,12 @@ class WheatherLocation extends Component{
             data: data
         }
     }
-    getTemp = kelvin => {
-        return convert(kelvin).from('K').to('C').toFixed(2);
-    }
-    getWeatherState = (weather) => {
-        return SUN;
-    }
-    getData = (weather_data) => {
-        const { humidity, temp } = weather_data.main;
-        const { speed } = weather_data.wind;
-        const weatherState = this.getWeatherState(this.weather);
-        const temperature = this.getTemp(temp);
-        const data = {
-            humidity: humidity,
-            temperature: temperature,
-            weatherState: weatherState,
-            wind: `${speed} m/s`,
-        }
-        return data;
-    }
+   
     handleUpdateClick = () => {
         fetch(api_weather).then( data => {
             return data.json();
         }).then( weather_data => {
-            const data = this.getData(weather_data);
+            const data = TrasnforWeather(weather_data);
             this.setState({ data : data});
             this.setState({ data });
             console.log(weather_data);
