@@ -6,7 +6,7 @@ import './WeatherLocation.css';
 
 const url = "http://api.openweathermap.org/data/2.5/weather";
 const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
-const city = "Bilbao";
+const city = "Barcelona";
 const api_weather = `${url}?q=${city}&APPID=${api_key}`;
 
 const data = {
@@ -25,7 +25,11 @@ class WheatherLocation extends Component{
         }
     }
     handleUpdateClick = () => {
-        console.log(fetch(api_weather));
+        fetch(api_weather).then( data => {
+            return data.json();
+        }).then( weather_data => {
+            console.log(weather_data);
+        });
         /*
         this.setState({
             data: data2//solo pasamos la propiedad nueva que se modifica
