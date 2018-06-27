@@ -24,6 +24,7 @@ class WheatherLocation extends Component{
             city: 'Barcelona',
             data: data
         }
+        console.log('Constructor');
     }
    
     handleUpdateClick = () => {
@@ -34,15 +35,31 @@ class WheatherLocation extends Component{
             this.setState({ data : data});
             this.setState({ data });
             console.log(weather_data);
-        });
-        /*
-        this.setState({
-            data: data2//solo pasamos la propiedad nueva que se modifica
-        });*/
-        console.log('Actualizado');
-        
+        });       
     }
+
+    //Solo se ejecutará una vez (podriamos poner cualquier inizialización del componente)
+    componentWillMount(){
+        console.log('componentWillMount');
+    }
+
+    //Se ejecuta después del render
+    componentDidMount(){
+        console.log("componentDidMount");
+    }
+
+    //Se ejecuta cada vez que el control se actualiza
+    componentWillUpdate(){
+        console.log("componentWillUpdate");
+    }
+
+    //Se ejcuta después del renderizado
+    componentDidUpdate() {
+        console.log("componentDidUpdate");
+    }
+    
     render = () => {
+        console.log('Render')
         const { city, data } = this.state; //destructuring
        
         return(        
