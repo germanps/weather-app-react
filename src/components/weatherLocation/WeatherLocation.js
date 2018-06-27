@@ -26,8 +26,7 @@ class WheatherLocation extends Component{
     }
     handleUpdateClick = () => {
         this.setState({
-            city: 'Bilbao',
-            data: data2
+            data: data2//solo pasamos la propiedad nueva que se modifica
         });
         console.log('Actualizado');
     }
