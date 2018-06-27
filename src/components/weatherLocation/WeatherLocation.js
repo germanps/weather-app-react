@@ -20,14 +20,33 @@ class WheatherLocation extends Component{
     constructor(){
         super();
         this.state = {
-            city: 'Bilbao',
+            city: 'Barcelona',
             data: data
         }
+    }
+    getWeatherState = (weather) => {
+        return SUN;
+    }
+    getData = (weather_data) => {
+        const { humidity, temp } = weather_data.main;
+        const { speed } = weather_data.wind;
+        const weatherState = this.getWeatherState(this.weather);
+        const data = {
+            humidity: humidity,
+            temperature: temp,
+            weatherState: weatherState,
+            wind: `${speed} m/s`,
+        }
+        return data;
     }
     handleUpdateClick = () => {
         fetch(api_weather).then( data => {
             return data.json();
         }).then( weather_data => {
+            const data = this.getData(weather_data);
+            this.setState({ data : data});
+            this.setState({ data });
+            debugger;
             console.log(weather_data);
         });
         /*
