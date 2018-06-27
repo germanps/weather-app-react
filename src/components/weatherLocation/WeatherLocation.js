@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Location from './../location/Location';
 import WeatherData from './../weatherData/WeatherData';
-import { SUN, WINDY } from './../../constants/weathers';
+import { SUN } from './../../constants/weathers';
 import './WeatherLocation.css';
+
+const url = "http://api.openweathermap.org/data/2.5/weather";
+const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
+const city = "Bilbao";
+const api_weather = `${url}?q=${city}&APPID=${api_key}`;
 
 const data = {
     temperature: 20,
@@ -10,12 +15,7 @@ const data = {
     humidity: 60,
     wind: '20 m/s'
 }
-const data2 = {
-    temperature: 50,
-    weatherState: WINDY,
-    humidity: 20,
-    wind: '50 m/s'
-}
+
 class WheatherLocation extends Component{
     constructor(){
         super();
@@ -25,10 +25,13 @@ class WheatherLocation extends Component{
         }
     }
     handleUpdateClick = () => {
+        console.log(fetch(api_weather));
+        /*
         this.setState({
             data: data2//solo pasamos la propiedad nueva que se modifica
-        });
+        });*/
         console.log('Actualizado');
+        
     }
     render = () => {
         const { city, data } = this.state; //destructuring
