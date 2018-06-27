@@ -1,1 +1,5 @@
 @import './../../content/css/variables.css';
+.wa-weather-data{
+    @mixin flex space-between, center, row;
+    width: 300px;
+}

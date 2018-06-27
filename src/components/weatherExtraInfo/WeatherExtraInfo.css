@@ -1,2 +1,6 @@
 @import './../../content/css/variables.css';
 
+.wa-weather-extra-info{
+    @mixin flex  space-between, center, row;
+    width: 100px;
+}

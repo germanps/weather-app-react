@@ -13,8 +13,13 @@ class App extends Component {
         </header>
         <div className="wa-app-intro container-fluid">
           <div className="row">
-            <WeatherLocation />
-            <Aside />
+            <div className="col-md-9">
+              <h2>Weather App</h2>
+              <WeatherLocation />
+            </div>
+            <div className="col-md-3">
+              <Aside />
+            </div>
           </div>
         </div>
       </div>

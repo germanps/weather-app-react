@@ -1,8 +1,6 @@
 @import './../../content/css/variables.css';
 .wa-weather-location{
-   background-color: var(--porcelain);
-   padding: var(--unit);
-   h2{
-      @mixin title 97%, var(--monza);
-   }
+   padding: calc(var(--unit)/2) 0; 
+   border-bottom: 1px solid var(--porcelain);
+   @mixin flex space-between, center, row;
 }

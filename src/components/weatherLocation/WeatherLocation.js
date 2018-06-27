@@ -4,9 +4,8 @@ import WeatherData from './../weatherData/WeatherData';
 import './WeatherLocation.css';
 
 const WheatherLocation = () => (
-   <div className="col-md-9 wa-weather-location">
-      <h2>Weather App</h2>
-      <Location city={'Bilbao!'}/>
+   <div className="wa-weather-location">
+      <Location city={'Bilbao'}/>
       <WeatherData />
    </div>
 );

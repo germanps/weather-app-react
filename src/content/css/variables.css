@@ -6,6 +6,7 @@
   --teal: #008080;
   --white: #ffffff;
   --vidaloca: #4c851f;
+  --orangepeel: #ffa100;
 
   /*units*/
   --unit: 1rem;
@@ -19,4 +20,10 @@
     margin: auto;
     color: $color;
     font-weight: bold;
+}
+@define-mixin flex $justify, $align, $direction{
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }

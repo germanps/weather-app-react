@@ -6,5 +6,7 @@
   }
 }
 .wa-app-intro{
-
+  h2{
+    @mixin title 100%, var(--monza);
+ }
 } 
