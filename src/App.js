@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import logo from './content/img/header.png';
 import Aside from './components/aside/Aside';
-import WeatherLocation from './components/weatherLocation/WeatherLocation';
+import LocationList from './components/locationList/LocationList';
 import './App.css';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
             <div className="row">
               <div className="col-md-9">
                 <h2>Weather App</h2>
-                <WeatherLocation />
+                <LocationList />
               </div>
               <div className="col-md-3">
                 <Aside />

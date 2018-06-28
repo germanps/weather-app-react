@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CircularProgress from 'material-ui/CircularProgress';
 import Location from './../location/Location';
 import WeatherData from './../weatherData/WeatherData';
@@ -7,20 +8,21 @@ import './WeatherLocation.css';
 
 const url = "http://api.openweathermap.org/data/2.5/weather";
 const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
-const city = "Barcelona";
-const api_weather = `${url}?q=${city}&APPID=${api_key}`;
 
 class WheatherLocation extends Component{
-    constructor(){
+    constructor({ city }){
         super();
         this.state = {
-            city: 'Barcelona',
+            city,
             data: null
         }
         console.log('Constructor');
     }
    
     handleUpdateClick = () => {
+        //inicializamos con los datos que vienen de la api
+        const { city } = this.state;
+        const api_weather = `${url}?q=${city}&APPID=${api_key}`;
         fetch(api_weather).then( data => {
             return data.json();
         }).then( weather_data => {
@@ -63,6 +65,10 @@ class WheatherLocation extends Component{
             </div>
         )
     };
+}
+
+WheatherLocation.propTypes = {
+    city: PropTypes.string,
 }
 
 export default WheatherLocation;
