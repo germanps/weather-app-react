@@ -16,7 +16,7 @@ class WheatherLocation extends Component{
             city,
             data: null
         }
-        console.log('Constructor');
+        //console.log('Constructor');
     }
    
     handleUpdateClick = () => {
@@ -29,13 +29,12 @@ class WheatherLocation extends Component{
             const data = TrasnforWeather(weather_data);
             /* this.setState({ data : data}); */
             this.setState({ data });
-            console.log(weather_data);
         });       
     }
 
     //Solo se ejecutará una vez (podriamos poner cualquier inizialización del componente)
     componentWillMount(){
-        console.log('componentWillMount');
+        //console.log('componentWillMount');
         this.handleUpdateClick();
     }
 
@@ -55,7 +54,7 @@ class WheatherLocation extends Component{
     }
     
     render = () => {
-        console.log('Render')
+        //console.log('Render')
         const { city, data } = this.state; //destructuring
        
         return(        

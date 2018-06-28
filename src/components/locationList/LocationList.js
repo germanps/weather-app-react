@@ -5,7 +5,7 @@ import './LocationList.css';
 
 //Transformar array de strings en array de componentes
  const strToComponent = cities => (
-   cities.map( city => (  <WheatherLocation city={city} /> ) )
+   cities.map( city => ( <WheatherLocation city={city} key={city}/> ) )
  ); 
 
 const LocationList = ({ cities }) => (
@@ -16,5 +16,5 @@ const LocationList = ({ cities }) => (
 
 LocationList.propTypes = {
    cities: PropTypes.array.isRequired,
- }
- export default LocationList;
+}
+export default LocationList;
