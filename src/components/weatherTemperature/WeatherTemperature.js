@@ -19,7 +19,7 @@ const stateToIconName = weatherState => {
         case WINDY:
             return "windy";
         case THUNDER:
-            return "storm";
+            return "thunderstorm";
         case DRIZZLER:
             return "day-showers";
         default:
