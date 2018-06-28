@@ -5,6 +5,18 @@ import Aside from './components/aside/Aside';
 import LocationList from './components/locationList/LocationList';
 import './App.css';
 
+const cities = [
+  'Barcelona',
+  'Bilbao',
+  'Sevilla',
+  'Bogota',
+  'Moscow',
+  'Montreal',
+  'Geneva',
+  'Tokyo',
+  'New york'
+]
+
 class App extends Component {
   render() {
     return (
@@ -17,7 +29,7 @@ class App extends Component {
             <div className="row">
               <div className="col-md-9">
                 <h2>Weather App</h2>
-                <LocationList />
+                <LocationList cities={cities}/>
               </div>
               <div className="col-md-3">
                 <Aside />
