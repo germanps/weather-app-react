@@ -15,9 +15,13 @@ const cities = [
   'Geneva',
   'Tokyo',
   'New york'
-]
+];
 
 class App extends Component {
+  handleSelectionLocation = city => {
+    console.log('handleSelectionLocation');
+  }
+
   render() {
     return (
       <MuiThemeProvider>
@@ -29,7 +33,7 @@ class App extends Component {
             <div className="row">
               <div className="col-md-9">
                 <h2>Weather App</h2>
-                <LocationList cities={cities}/>
+                <LocationList cities={cities} onSelectedLocation={this.handleSelectionLocation}/>
               </div>
               <div className="col-md-3">
                 <Aside />

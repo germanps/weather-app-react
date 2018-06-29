@@ -3,18 +3,32 @@ import PropTypes from 'prop-types';
 import WheatherLocation from './../weatherLocation/WeatherLocation';
 import './LocationList.css';
 
-//Transformar array de strings en array de componentes
- const strToComponent = cities => (
-   cities.map( city => ( <WheatherLocation city={city} key={city}/> ) )
- ); 
+const LocationList = ({ cities, onSelectedLocation }) => {
+  const handleWeatherLocationClick = city => {
+    console.log('handleWeatherLocationClick');
+    onSelectedLocation(city);
+  };
+  //Transformar array de strings en array de componentes
+  const strToComponent = cities => (
+    cities.map( city => ( 
+      <WheatherLocation 
+        key={city}
+        city={city} 
+        onWeatherLocationClick = { () => handleWeatherLocationClick(city)}
+      /> 
+      ) 
+    )
+  ); 
 
-const LocationList = ({ cities }) => (
-   <div className="wa-location-list">
-      {strToComponent(cities)}
-   </div>
-);
+  return(
+    <div className="wa-location-list">
+        {strToComponent(cities)}
+    </div>
+  );
+};
 
 LocationList.propTypes = {
    cities: PropTypes.array.isRequired,
+   onSelectedLocation: PropTypes.func,
 }
 export default LocationList;
