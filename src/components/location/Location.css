@@ -1,0 +1,6 @@
+@import './../../content/css/variables.css';
+.wa-location{
+   @media only screen and (min-width: 992px){
+      min-width: 120px;
+   }
+}

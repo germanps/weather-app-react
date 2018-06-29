@@ -19,8 +19,11 @@ class WheatherLocation extends Component{
         //console.log('Constructor');
     }
    
-    handleUpdateClick = () => {
-        //inicializamos con los datos que vienen de la api
+
+    //Solo se ejecutará una vez (podriamos poner cualquier inizialización del componente)
+    componentWillMount(){
+        //console.log('componentWillMount');
+       //inicializamos con los datos que vienen de la api
         const { city } = this.state;
         const api_weather = `${url}?q=${city}&APPID=${api_key}`;
         fetch(api_weather).then( data => {
@@ -29,13 +32,7 @@ class WheatherLocation extends Component{
             const data = TrasnforWeather(weather_data);
             /* this.setState({ data : data}); */
             this.setState({ data });
-        });       
-    }
-
-    //Solo se ejecutará una vez (podriamos poner cualquier inizialización del componente)
-    componentWillMount(){
-        //console.log('componentWillMount');
-        this.handleUpdateClick();
+        });      
     }
 
     //Se ejecuta después del render
