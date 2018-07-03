@@ -6,10 +6,10 @@ class ForecastExtended extends Component {
     render() {
         const city = this.props.city;
         return(
-            <div className="we-forecast-extended">
+            <div className="wa-forecast-extended">
                 {city === null ? 
-                    <h2>ForecastExtended for: Selecciona una ciudad</h2> :
-                    <h2>ForecastExtended for: {city}</h2>} 
+                    <h2>ForecastExtended for: <span className="we"> Selecciona una ciudad </span></h2> :
+                    <h2>ForecastExtended for: <span className=""> {city} </span></h2>} 
             </div>
         );
     }

@@ -1,0 +1,6 @@
+@import './../../content/css/variables.css';
+.wa-forecast-extended{
+  h2{
+    @mixin title 100%, var(--monza);
+ }
+}

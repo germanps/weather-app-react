@@ -22,6 +22,7 @@ const LocationList = ({ cities, onSelectedLocation }) => {
 
   return(
     <div className="wa-location-list">
+        <h2>Weather App</h2>
         {strToComponent(cities)}
     </div>
   );
