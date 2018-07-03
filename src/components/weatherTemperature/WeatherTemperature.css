@@ -1,8 +1,9 @@
 @import './../../content/css/variables.css';
 .wa-weather-temperature{
-    @mixin flex space-evenly, center, row;
+    @mixin flex flex-start, center, row;
     width: 50%;
     i{
         color: var(--orangepeel);
+        margin-right: 1rem;
     }
 }
