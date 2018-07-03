@@ -18,11 +18,17 @@ const cities = [
 ];
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = { city: 'Nueva ciudad' };
+  }
   handleSelectionLocation = city => {
-    console.log('handleSelectionLocation');
+    console.log(`handleSelectionLocation ${city}`);
+    this.setState({ city: city });
   }
 
   render() {
+    const { city } = this.state;
     return (
       <MuiThemeProvider>
         <div className="wa-app ">
@@ -31,12 +37,12 @@ class App extends Component {
           </header>
           <div className="wa-app-intro container-fluid">
             <div className="row">
-              <div className="col-md-9">
+              <div className="col-md-8">
                 <h2>Weather App</h2>
                 <LocationList cities={cities} onSelectedLocation={this.handleSelectionLocation}/>
               </div>
-              <div className="col-md-3">
-                <Aside />
+              <div className="col-md-4">
+                <Aside city= {city} />
               </div>
             </div>
           </div>
