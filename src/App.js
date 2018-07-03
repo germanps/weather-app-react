@@ -20,7 +20,7 @@ const cities = [
 class App extends Component {
   constructor(){
     super();
-    this.state = { city: 'Nueva ciudad' };
+    this.state = { city: null };
   }
   handleSelectionLocation = city => {
     console.log(`handleSelectionLocation ${city}`);

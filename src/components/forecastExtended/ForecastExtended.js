@@ -7,7 +7,9 @@ class ForecastExtended extends Component {
         const city = this.props.city;
         return(
             <div className="we-forecast-extended">
-                <h2>ForecastExtended for: {city}</h2>
+                {city === null ? 
+                    <h2>ForecastExtended for: Selecciona una ciudad</h2> :
+                    <h2>ForecastExtended for: {city}</h2>} 
             </div>
         );
     }
