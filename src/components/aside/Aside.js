@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import asideImage from './../../content/img/aside.png';
 import './Aside.css'; 
 import ForecastExtended from './../forecastExtended/ForecastExtended';
+import ForecastItem from './../forecastItem/ForecastItem';
 
 class Aside extends Component {
     render(){
@@ -9,7 +9,7 @@ class Aside extends Component {
         return(
              <div className="wa-aside">
                 <ForecastExtended city={city}/>
-                <img src={asideImage} alt="imagen aside" />
+                <ForecastItem />
             </div>
         )
     }
