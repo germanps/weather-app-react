@@ -9,7 +9,7 @@ class Aside extends Component {
         return(
              <div className="wa-aside">
                 <ForecastExtended city={city}/>
-                <ForecastItem />
+                <ForecastItem weekDay={'Lunes'}/>
             </div>
         )
     }
