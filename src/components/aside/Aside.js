@@ -8,7 +8,7 @@ const days = [
     'Martes',
     'Miercoles',
     'Jueves',
-    'Viernas',
+    'Viernes',
     'Sabado',
     'Domingo'
 ];

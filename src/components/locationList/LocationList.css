@@ -1,5 +1,6 @@
 @import './../../content/css/variables.css';
 .wa-location-list{
+  margin-bottom: 1rem;
   h2{
     @mixin title 100%, var(--monza);
  }
