@@ -6,15 +6,18 @@ import LocationList from './components/locationList/LocationList';
 import './App.css';
 
 const cities = [
-  'Barcelona',
-  'Bilbao',
-  'Sevilla',
-  'Bogota',
-  'Moscow',
-  'Montreal',
-  'Geneva',
-  'Tokyo',
-  'New york'
+  'Barcelona, es',
+  'Olesa de Montserrat, es',
+  'Vielha, es',
+  'Bilbao, es',
+  'Sevilla, es',
+  'Madrid, es',
+  'Bogota, co',
+  'Moscow, ru',
+  'Montreal, ca',
+  'Geneva, ch',
+  'Tokyo, jp',
+  'New york, us'
 ];
 
 class App extends Component {

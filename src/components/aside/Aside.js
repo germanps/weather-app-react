@@ -11,11 +11,18 @@ const days = [
     'Viernas',
     'Sabado',
     'Domingo'
-]
+];
+
+const data = {
+    temperature: 10,
+    humidity: 10,
+    weatherState: 'sun',
+    wind: 'normal'
+  }
 
 class Aside extends Component {
     renderForecastItemDay(){
-        return days.map( day => <ForecastItem weekDay={day}/>);
+        return days.map( day => <ForecastItem data={data} hour={10} weekDay={day} key={day}/>);
     }
     render(){
         const city = this.props.city;

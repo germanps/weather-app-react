@@ -1,6 +1,6 @@
 @import './../../content/css/variables.css';
 .wa-weather-location{
-   padding: calc(var(--unit)/2) 0; 
+   padding: calc(var(--unit)/3) 0; 
    border-bottom: 1px solid var(--porcelain);
    @mixin flex space-between, center, row;
 }
