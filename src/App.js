@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import logo from './content/img/header.png';
-import Aside from './components/aside/Aside';
+import ForecastExtended from './components/forecastExtended/ForecastExtended';
 import LocationList from './components/locationList/LocationList';
 import './App.css';
 
@@ -26,8 +26,8 @@ class App extends Component {
     this.state = { city: null };
   }
   handleSelectionLocation = city => {
-    console.log(`handleSelectionLocation ${city}`);
     this.setState({ city: city });
+    console.log(`handleSelectionLocation ${city}`);
   }
 
   render() {
@@ -44,7 +44,10 @@ class App extends Component {
                 <LocationList cities={cities} onSelectedLocation={this.handleSelectionLocation}/>
               </div>
               <div className="col-md-4">
-                <Aside city= {city} />
+                <div className="wa-forecast-aside">
+                  <h2>Forecast Extended</h2>
+                  {city ? <ForecastExtended city={city} /> : null} 
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,9 @@
+@import './../../content/css/variables.css';
+.wa-forecast-extended-title{
+  margin: 1rem 0;
+  color: var(--monza);
+}
+
+.wa-forecast-data{
+
+}
