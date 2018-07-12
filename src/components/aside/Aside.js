@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Aside.css'; 
-import ForecastExtended from './../forecastExtended/ForecastExtended';
+import ForecastExtendedHeader from './../forecastExtendedHeader/ForecastExtendedHeader';
 import ForecastExtendedDetalls from './../forecastExtendedDetalls/ForecastExtendedDetalls'
 
 
@@ -9,8 +9,8 @@ class Aside extends Component {
         const city = this.props.city;
         return(
              <div className="wa-aside">
-                <ForecastExtended city={city}/>
-                <ForecastExtendedDetalls />
+                <ForecastExtendedHeader city={city}/>
+                <ForecastExtendedDetalls city={city}/>
             </div>
         )
     }

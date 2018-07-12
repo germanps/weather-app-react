@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './ForecastExtended.css';
+import './ForecastExtendedHeader.css';
 
 class ForecastExtended extends Component {
     render() {
