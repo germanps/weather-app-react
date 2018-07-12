@@ -1,7 +1,7 @@
 import convert from 'convert-units';
 import { CLOUDY, SUN, RAIN, SNOW, THUNDER, DRIZZLER } from './../constants/weathers';
 const getTemp = kelvin => {
-    return Number(convert(kelvin).from('K').to('C').toFixed(2));
+    return Number(convert(kelvin).from('K').to('C').toFixed(1));
 }
 const getWeatherState = (weather) => {
     const { id } = weather[0];

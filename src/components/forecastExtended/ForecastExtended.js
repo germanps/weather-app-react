@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import transformForecast from './../../services/transformForecast';
 import './ForecastExtended.css'; 
-//import ForecastItem from './../forecastItem/ForecastItem';
+import ForecastItem from './../forecastItem/ForecastItem';
 
 /* const days = [
     'Lunes',
@@ -30,18 +31,21 @@ class ForecastExtended extends Component {
     
     //sólo se ejecutara una vez después del renderizado del componente
     componentDidMount(){ 
-        console.log('El componente aun no está disponible en el DOM');
+        console.log('componentDidMount');
         const url_forecast = `${url}?q=${this.props.city}&appid=${api_key}`;
         fetch(url_forecast).then(
             data => (data.json())
         ).then(
             weather_data => {
                 console.log(weather_data);
+                const forecastData = transformForecast(weather_data);
+                console.log(forecastData);
+                this.setState({ forecastData: forecastData})
             }
         )
     }
     renderForecastItemDay(){
-        return "Render items";
+        return <h3>Render items</h3>;
         //return days.map( day => <ForecastItem data={data} hour={10} weekDay={day} key={day}/>);
     }
     renderProgress = () => {
