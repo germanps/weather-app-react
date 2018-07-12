@@ -9,6 +9,7 @@ const cities = [
   'Barcelona, es',
   'Olesa de Montserrat, es',
   'Vielha, es',
+  'Rubi, es',
   'Bilbao, es',
   'Sevilla, es',
   'Madrid, es',
