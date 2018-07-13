@@ -1,18 +1,15 @@
 @import './../../content/css/variables.css';
 .wa-forecast-item {
-    @mixin flex space-between, flex-start, column;
+    @mixin flex space-between, center, row;
     border-bottom: 1px solid var(--iron);
     padding: .5rem 0;
     font-size: 10px;
-    h4{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 1rem;
+    h4{ 
+      width: 60px;
       color: var(--teal);
     }
     .wa-weather-data{
-      width: 100%;
+      width: calc(100% - 100px);
       .wa-weather-temperature{
         i{
           font-size: 1rem !important;

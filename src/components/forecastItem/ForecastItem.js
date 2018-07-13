@@ -5,7 +5,7 @@ import './ForecastItem.css';
 
 const ForecastItem = ({ weekDay, hour, data }) => (
   <div className="wa-forecast-item">
-    <h4>{weekDay} <span> Hora: {hour}</span></h4>
+    <h4>{weekDay}, <span>{hour}h</span></h4>
     <WeatherData data={data}/>
   </div>
 );

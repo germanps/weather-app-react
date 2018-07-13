@@ -31,8 +31,21 @@ class ForecastExtended extends Component {
     
     //sólo se ejecutara una vez después del renderizado del componente
     componentDidMount(){ 
-        console.log('componentDidMount');
-        const url_forecast = `${url}?q=${this.props.city}&appid=${api_key}`;
+        this.updateCity(this.props.city);
+    }
+
+    //Se ejecuta cada vez que hay una actualización de las propiedades(excepto la primera vez que se ejecuta el componente)
+    componentWillReceiveProps(nextProps){
+        //si viene una city nueva se vuelve a llamar al updateCity con la nueva ciudad
+        if (nextProps.city !== this.props.city) {
+            this.setState({ forecastData: null });
+            this.updateCity(nextProps.city);
+        }
+    }
+
+    //Actualiza el fetch con la ciudad nueva que viene por props
+    updateCity = city => {
+        const url_forecast = `${url}?q=${city}&appid=${api_key}`;
         fetch(url_forecast).then(
             data => (data.json())
         ).then(
@@ -54,7 +67,7 @@ class ForecastExtended extends Component {
                             />);
     }
     renderProgress = () => {
-        return <h4>cargando pronostico extendido</h4>;
+        return <h4>Cargando...</h4>;
     }
     render(){    
         const { city } = this.props; 
